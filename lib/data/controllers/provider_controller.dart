@@ -53,6 +53,5 @@ class ProviderController extends ChangeNotifier {
     _posts = await apiClient.getData();
     _isLoading = false;
     notifyListeners();
-    print(_posts);
   }
 }

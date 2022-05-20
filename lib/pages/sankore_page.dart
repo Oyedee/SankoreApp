@@ -19,18 +19,14 @@ class _SankorePageState extends State<SankorePage> {
     if (routeName == Routes.contactsPage) {
       PermissionStatus permissionStatus = await _getContactPermission();
       if (permissionStatus == PermissionStatus.granted) {
-        if (routeName != null) {
-          Navigator.of(context).pushNamed(routeName);
-        }
+        Navigator.of(context).pushNamed(routeName);
       } else {
         _handleInvalidPermissions(permissionStatus);
       }
     } else {
       PermissionStatus permissionStatus = await _getSmsPermission();
       if (permissionStatus == PermissionStatus.granted) {
-        if (routeName != null) {
-          Navigator.of(context).pushNamed(routeName);
-        }
+        Navigator.of(context).pushNamed(routeName);
       } else {
         _handleInvalidPermissions(permissionStatus);
       }
